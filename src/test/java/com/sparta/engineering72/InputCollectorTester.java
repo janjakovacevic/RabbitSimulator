@@ -1,8 +1,6 @@
 package com.sparta.engineering72;
 
-import com.sparta.engineering72.Input.InputCollector;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import com.sparta.engineering72.input.InputCollector;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;

@@ -1,6 +1,6 @@
 [ERROR] 2020-10-30 13:48:06.592 [main] Simulator - Invalid input
 java.util.InputMismatchException: Invalid input
-	at com.sparta.engineering72.Input.InputCollector.getReportChoice(InputCollector.java:25) ~[classes/:?]
+	at com.sparta.engineering72.input.InputCollector.getReportChoice(InputCollector.java:25) ~[classes/:?]
 	at com.sparta.engineering72.InputCollectorTester.getReportChoiceTestInvalidLowerBound(InputCollectorTester.java:22) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
@@ -69,7 +69,7 @@ java.util.InputMismatchException: Invalid input
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
 [ERROR] 2020-10-30 13:48:06.750 [main] Simulator - Invalid input
 java.util.InputMismatchException: Invalid input
-	at com.sparta.engineering72.Input.InputCollector.getReportChoice(InputCollector.java:25) ~[classes/:?]
+	at com.sparta.engineering72.input.InputCollector.getReportChoice(InputCollector.java:25) ~[classes/:?]
 	at com.sparta.engineering72.InputCollectorTester.getReportChoiceTestInvalidUpperBound(InputCollectorTester.java:16) ~[test-classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
