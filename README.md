@@ -32,7 +32,7 @@
 - Female foxes always give birth to anywhere between 1-10 kits every 12 months
 - Foxes hunt rabbits for prey
 - First generation of foxes (the starting couple) doesn't hunt rabbits
-- All other foxes hunt up to 20 rabbits each months
+- All other foxes hunt up to 20 rabbits each month
 
 ## **Technology**
 - Scrum Framework within Agile
