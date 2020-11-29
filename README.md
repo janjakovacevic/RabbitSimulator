@@ -1,5 +1,8 @@
 # Rabbit Simulator
 
+<img align="right" width="450" height="350" src="https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/24843973-5114-4226-987b-d5e6bd13ed77_200x200.png">
+
+
 ![java_badge](https://img.shields.io/badge/-Java-lightgrey?style=for-the-badge&logo=appveyor)
 ![maven_badge](https://img.shields.io/badge/-Maven-yellow?style=for-the-badge&logo=appveyor) 
 ![memory_management](https://img.shields.io/badge/-Memory%20Management-orange?style=for-the-badge&logo=appveyor)
