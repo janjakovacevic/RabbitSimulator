@@ -20,7 +20,7 @@
 
 ## **Overview**
 - A program that simulates how rabbits and foxes would behave in a real-life scenario: breeding and eating patterns
-- The simualation starts with one rabbit couple and one fox couple
+- The simulation starts with one rabbit couple and one fox couple
 - User can choose to change default maturity and death age
   - If not, default values are as follows:
     - Rabbit maturity age: 3 months
