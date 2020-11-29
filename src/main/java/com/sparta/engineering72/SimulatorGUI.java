@@ -1,15 +1,13 @@
 package com.sparta.engineering72;
 
-import com.sparta.engineering72.Animal.Fox.Fox;
-import com.sparta.engineering72.Animal.Rabbit.Rabbit;
-import com.sparta.engineering72.Log.Logger;
-import com.sparta.engineering72.Simulation.Simulator;
-import com.sparta.engineering72.Utility.ReportPacker;
+import com.sparta.engineering72.animal.fox.Fox;
+import com.sparta.engineering72.animal.rabbit.Rabbit;
+import com.sparta.engineering72.log.Logger;
+import com.sparta.engineering72.simulation.Simulator;
+import com.sparta.engineering72.utility.ReportPacker;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
 public class SimulatorGUI extends JFrame{

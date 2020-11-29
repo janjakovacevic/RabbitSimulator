@@ -1,143 +1,97 @@
-# Rabbit-Population-Explosion
+# Rabbit Simulator
 
-## Sprint 0
-
-### Pre-Planning (Monday, 26.10. 10:00-13:00)
-- received product requirements from the client (Manish)
-- created a GitHub repo and a project board in order to track work
-- creating user stories with acceptance criteria and testing plan based on customer requirements
-  - As a user, I would like to see how many male and female rabbits there are, so that I can see how the population is split.
-  - As a user, I would like to see the time passed, so I can see how the data changed by time.
-  - As a User, I would like to give a time span, so that I can choose how long the program runs.
-  - As a User, I would like the program to start with 1 male and 1 female rabbit, so that it models a group of rabbits accurately.
-  - As a user, I would like to see the final population, so that I can analyse the data.
-  - As a user, I would like to see the death count, so that I would know how many rabbits died.
-- created definitions of done for both user stories and project as a whole
-- created an outline of a project
-- came up with the questions to be clarified by the client
-
-### Planning (Monday, 26.10. 14:00-15:30)
-- questions clarified by the client 
-- created coding convention
-- additional user stories added
-  - As a user, I would like to know where to input any information, so that I know how to navigate the program.
-  - As a user, I would like to know what I need to enter for the program to run, so that I know what Is considered a valid input
-  - As a user, I would like to know how the data will be displayed so that I know where to look for this information
- - divided the work amongst team members by user stories to start working on them
-
-### Coding - Beginning of Sprint 1 (Monday, 26.10. 16:00-17:30)
-- completed two user stories and merged them to **dev** branch
-  - As a User, I would like to give a time span, so that I can choose how long the program runs.
-  - As a User, I would like the program to start with 1 male and 1 female rabbit, so that it models a group of rabbits accurately.
-- worked on additional two user stories 
-  - As a user, I would like to see how many male and female rabbits there are, so that I can see how the population is split.
-  - As a user, I would like to see the time passed, so I can see how the data changed by time.
-
-### Successes
-- created the user stories
-- comprehended what a user wanted
-- created task backlog using user stories
-- organised with what tasks were completed by whom
-- started coding
-- improved understanding of Rabbit class
-- adhered to SOLID principles and TDD
-- successfully merged two branches to **dev**
-
-### Challenges
-- making sure everyone is keeping up with the project
-- difficulties dividing the work based of user stories
-- difficulties coding when multiple sub-teams are working on the same classes
+![java_badge](https://img.shields.io/badge/-Java-lightgrey?style=for-the-badge&logo=appveyor)
+![maven_badge](https://img.shields.io/badge/-Maven-yellow?style=for-the-badge&logo=appveyor) 
+![memory_management](https://img.shields.io/badge/-Memory%20Management-orange?style=for-the-badge&logo=appveyor)
+![agile](https://img.shields.io/badge/-Agile-blue?style=for-the-badge&logo=appveyor)
+![scrum](https://img.shields.io/badge/-Scrum-red?style=for-the-badge&logo=appveyor)
+![testing](https://img.shields.io/badge/-Testing-green?style=for-the-badge&logo=appveyor)
 
 
-## Sprint 1 (Tuesday, 27.10. all day)
-### Work Done
-- created model classes and interface
-- handled input validation and output display
-
-### Successes
-- working piece of software
-- readable code, easy to understand
-- following SOLID principles
-
-### Challenges
-- struggled with merge conflicts
-- division of labor amongst 9 people - too many people working on the same things
-- user stories too big, a lot of overlaps
-- not enough testing
-- memory limitations
+### **Table Of Contents**
+  * [**Overview**](#overview)
+  * [**Technology**](#technology)
+  * [**Observations**](#observations)
+  * [**Screenshots**](#screenshots)
+      - [CLI Program](#cli-program)
+      - [GUI Program](#gui-program)
+  * [**Future Work**](#future-work)
 
 
-## Sprint 2 (Wednesday, 28.10. all day)
-### Work Done
-- solved Concurrency issues by using different methods handling large amounts of objects
-- added user input for report display
-- writing report to both the console and a txt file
-- handled input validation and output display
-- added extra layers of abstraction to overall code
-- added tests for different user cases
-- using threading to code
-- packaged code
+## **Overview**
+- A program that simulates how rabbits and foxes would behave in a real-life scenario: breeding and eating patterns
+- The simualation starts with one rabbit couple and one fox couple
+- User can choose to change default maturity and death age
+  - If not, default values are as follows:
+    - Rabbit maturity age: 3 months
+    - Rabbit death age: 60 months (5 years)
+    - Fox maturity age: 12 months
+    - Fox death age: 60 months (5 years)
+- Female rabbits have a 50% chance of giving birth each month after the maturity age has been reached
+- Female rabbits can give birth to anywhere between 1-14 bunnies every time they get pregnant
+- Female foxes always give birth to anywhere between 1-10 kits every 12 months
+- Foxes hunt rabbits for prey
+- First generation of foxes (the starting couple) doesn't hunt rabbits
+- All other foxes hunt up to 20 rabbits each months
 
-### Successes
-- SOLID principles adhered to
-- tests for different user stories 
-- accurate information for certain test cases
-- pre-working report printed in console
-- no merge conflicts 
-- successful demo
-- better communication
-- better job dividing the work
+## **Technology**
+- Scrum Framework within Agile
+  - Followed Agile methodology to allow for easier implementation of changes in the requirements
+- BigInteger
+  - Made use of BigInteger to prevent the simulation from being limited by the integer limit
+- JSON/Jackson
+  - Made use of Jackson to write reports to an external `JSON` file allowing for further application of data
+- OOP: Object Oriented Programming
+  - Implements the 4 pillars of OOP (why are they important?)
+- SOLID
+  - Following SOLID principles for best practice that would allow for maintainable and extendable code
 
-### Challenges
-- project freezing on certain test cases (need better memory management)
-- testing still incomplete
-- GUI not added yet
-- refactoring not completed yet
+## **Observations**
+- The biggest challanges that were faced during the development of this project were:
+  - Memory Management
+    - Initally, each animal was represented as an object 
+    - Due to the large number of objects being created at each iteration (month), the simulation wasn't able to run for very long (<2 years)
+    - To solve this problem, instead of creating a new object for each new animal being born, one object was created for each generation/age group, and a count variable was introduced to keep track of the number of animals of specific age
+  - Integer limit
+    - Depending on how long the simulation ran for, the Integer limit was sometimes getting exceeded and turning negative
+    - To solve this problem, all integer values were substituted with BigInteger that allowed for exceptionally large values to be handled
+  - Efficiency of the simulation
+    - Once the number of animals of certain age got large enough, the program would take too long running due to the number of iterations that had to be performed
+    - To solve this problem, a threshold value was set: every time it was reached, all randomized values would converge to a specific values and, by doing so, cut down on the number of iterations that need to be performed expediting the process
 
-### Future Work
-- begin working on presentation
-- begin working on GUI
-- completion of code refactoring
-- completion of Test cases
-- handle possible code crashing or code freezing statements
 
-### Retrospective
-- start: working on GUI and third set of requirements
-- more: testing and improving memory management
-- keep: raising your hand when you want to speak
-- less: big merges
-- stop: staying overtime
+## **Screenshots**
+- When the application is launched, user will first be asked for a choice on how they would like to run the application - in the Command Line Interface or in Graphical User Interface.
 
-## Sprint 3 (Thursday, 29.10. all day)
-### Work Done
-- improved memory management
-- more tests written
-- storing reports in a JSON file
-- implemented most of the new requirements
-- GUI implemented
-- presentation outline
+![]()
 
-### Successes
-- program can hypothetically run for infinitly long
-- handling report in 3 different ways (console, txt, json)
-- large test coverage
-- working GUI
-- outlined the presentation and divided slides
+### **CLI Program**
+- Should the user select option `1`, the following prompt would be displayed.
 
-### Challenges
-- haven't allowed for user to change constants yet (maturity/death age)
-- `long` is sometimes not big enough (numbers can get too big for large periods of time)
-- some struggles with merging
+![]()
 
-### Future Work
-- allow for change in constants
-- finish the presentation
-- refactor the code (deep cleaning)
-- calcualte code coverage
+- Depending on the input provided by the user, up to 3 kinds of reports will be generated:
+    - in the command line
+        ![]()
+    - in a `TXT` file
+        ![]()
+    - in a `JSON` file
+        ![]()
 
-### Retrospective
-- start: test driven development in future
-- more: communicating well (jumping in different calls and keeping each other up to date)
-- keep: working in smaller groups (and smaller groups within those groups)
-- less: big merges
-- stop: staying late (past 5 o'clock)
+### **GUI Program**
+- Should the user select option `2`, they will be displayed with the following GUI. Notice that the default values are already entered, but the user is welcome to make any adjustments they choose to
+
+![]()
+
+- Depending on the input provided by the user, they will be provided with 2 kinds of reports - within GUI (shown in the image below) as well as in a `JSON` file inside resources foulder.
+    
+![]()
+
+
+## **Future Work**
+Possible improvements for `Rabbit Simulator 2.0`
+- Simulating hunting behavior more accurately
+- Foxes die after a year if they don’t eat
+- Add more animals
+- Add more food sources (plants/grass)
+- Display data in a more visually appealing manner

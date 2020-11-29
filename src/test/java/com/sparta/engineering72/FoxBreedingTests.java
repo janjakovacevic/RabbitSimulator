@@ -1,8 +1,8 @@
 package com.sparta.engineering72;
 
-import com.sparta.engineering72.Animal.Fox.FoxSkulk;
-import com.sparta.engineering72.Simulation.FoxLifeCycle;
-import com.sparta.engineering72.Simulation.Simulator;
+import com.sparta.engineering72.animal.fox.FoxSkulk;
+import com.sparta.engineering72.simulation.FoxLifeCycle;
+import com.sparta.engineering72.simulation.Simulator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
