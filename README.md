@@ -63,29 +63,35 @@
 ## **Screenshots**
 - When the application is launched, user will first be asked for a choice on how they would like to run the application - in the Command Line Interface or in Graphical User Interface.
 
-![]()
+![cli-gui](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/cli-gui.png)
 
 ### **CLI Program**
 - Should the user select option `1`, the following prompt would be displayed.
 
-![]()
+![cli_prompts](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/cli-prompts.png)
 
 - Depending on the input provided by the user, up to 3 kinds of reports will be generated:
     - in the command line
-        ![]()
+    
+        ![cli_report](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/cli-report.png)
+        
     - in a `TXT` file
-        ![]()
+    
+        ![txt_report](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/txt-report.png)
+        
     - in a `JSON` file
-        ![]()
+        
+        ![json_report](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/json-report.png)
+
 
 ### **GUI Program**
 - Should the user select option `2`, they will be displayed with the following GUI. Notice that the default values are already entered, but the user is welcome to make any adjustments they choose to
 
-![]()
+![gui_prompt](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/gui-prompts.png)
 
 - Depending on the input provided by the user, they will be provided with 2 kinds of reports - within GUI (shown in the image below) as well as in a `JSON` file inside resources foulder.
     
-![]()
+![gui_report](https://github.com/janjakovacevic/Rabbit-Population-Explosion/blob/dev/rabbit%20assets/gui-report.png)
 
 
 ## **Future Work**
