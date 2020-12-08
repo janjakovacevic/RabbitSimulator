@@ -44,7 +44,7 @@
 - JSON/Jackson
   - Made use of Jackson to write reports to an external `JSON` file allowing for further application of data
 - OOP: Object Oriented Programming
-  - Implements the 4 pillars of OOP (why are they important?)
+  - Implements the 4 pillars of OOP
 - SOLID
   - Following SOLID principles for best practice that would allow for maintainable and extendable code
 
