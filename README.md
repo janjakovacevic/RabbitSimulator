@@ -51,7 +51,7 @@
 ## **Observations**
 - The biggest challanges that were faced during the development of this project were:
   - Memory Management
-    - Initally, each animal was represented as an object 
+    - Initially, each animal was represented as an object 
     - Due to the large number of objects being created at each iteration (month), the simulation wasn't able to run for very long (<2 years)
     - To solve this problem, instead of creating a new object for each new animal being born, one object was created for each generation/age group, and a count variable was introduced to keep track of the number of animals of specific age
   - Integer limit
